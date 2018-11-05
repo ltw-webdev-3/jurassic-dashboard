@@ -1,0 +1,57 @@
+repo: 'jurassic-dashboard'
+canvasCourse: 'web-dev-3'
+
+inherit:
+  - naming-restrict-live
+  - git-2
+  - html
+  - css
+  - google-fonts
+  - css-order-modules-grid-type-main
+  - screenshots-all
+  - favicons
+
+html:
+  - path: 'index.html'
+    has:
+      - ['link[href*="Ubuntu+Mono"]', 'The Google Font, `Ubuntu Mono` (regular & bold), is missing']
+      - 'div.grid > div.unit'
+      - 'svg'
+      - 'menu > li > button > i.icon > svg > use[href*="#"]'
+
+css:
+  - path: 'css/main.css'
+    search:
+      - '#333'
+      - '#f62e52'
+      - '#ffd31d'
+      - '#6feff9'
+      - '@keyframes'
+  - path: 'css/modules.css'
+    locked: true
+  - path: 'css/grid.css'
+    locked: true
+  - path: 'css/type.css'
+    locked: true
+
+files:
+  - path: 'images/icons.svg'
+    smushed: true
+    search:
+      - 'id="forward"'
+      - 'id="backward"'
+      - 'id="pause"'
+      - 'id="stop"'
+      - 'id="power"'
+      - 'id="tel"'
+      - 'id="warning"'
+
+screenshots:
+  - path: 'index.html'
+    label: 'After'
+    sizes: [1440]
+    allowAnimations: true
+    before: |
+      on($('body'), 'animationend', () => {
+        done();
+      });
