@@ -33,7 +33,7 @@ download: 'https://assets.learn-the-web.algonquindesign.ca/web-dev-3/jurassic-da
 Visually match the images in the “screenshots” folder and create the interaction shown in the linked video.
 
 - Final screenshots in the “screenshots” folder.
-- [**Watch this video to see how it interacts.**](https://youtu.be/)
+- [**Watch this video to see how it interacts.**](https://youtu.be/AM8Z6YhTIoE)
 
 ---
 
